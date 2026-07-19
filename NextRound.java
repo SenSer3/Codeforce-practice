@@ -18,7 +18,7 @@ public class NextRound {
                 count++;
             }
         }
-        System.err.println(count);
+        System.out.println(count);
         sc.close();
     }
 }
