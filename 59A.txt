@@ -1,0 +1,27 @@
+Codeforce 59A - Word
+
+import java.util.Scanner;
+
+public class Word {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String string = sc.nextLine();
+        int upper = 0;
+        int lower = 0;
+        for (char s : string.toCharArray()) {
+            if (Character.isUpperCase(s)) {
+                upper++;
+            } else if (Character.isLowerCase(s)) {
+                lower++;
+            }
+        }
+
+        if (upper > lower) {
+            System.out.println(string.toUpperCase());
+        } else {
+            System.out.println(string.toLowerCase());
+        }
+        sc.close();
+
+    }
+}
