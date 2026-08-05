@@ -1,0 +1,29 @@
+Codeforces Problem 734A - Anton and Danik
+
+import java.util.Scanner;
+
+public class AntonDanik{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine();
+        String wins = sc.nextLine();
+        int awin = 0;
+        int dwin = 0;
+        for (char win : wins.toCharArray()) {
+            if(win == 'A'){
+                awin++;
+            }else{
+                dwin++;
+            }
+        }
+        if(awin>dwin){
+            System.out.println("Anton");
+        } else if(awin<dwin){
+            System.out.println("Danik");
+        } else{
+            System.out.println("Friendship");
+        }
+        sc.close();
+    }
+}
