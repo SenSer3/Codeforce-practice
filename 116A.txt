@@ -1,0 +1,24 @@
+Codeforces Problem 116A - Tram
+
+import java.util.Scanner;
+
+public class Tram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine();
+        int in;
+        int out;
+        int max = 0;
+        int pass=0;
+        for (int i = 0; i < n; i++) {
+            out = sc.nextInt();
+            in = sc.nextInt();
+            pass = pass-out;
+            pass = pass+in;
+            max = Math.max(max,pass);
+        }
+        System.out.println(max);
+        sc.close();
+    }
+}
